@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7E0BB013-474A-4588-8DA1-6E6F9059E367}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DeweyDecApplication</RootNamespace>
+    <AssemblyName>DeweyDecApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ColourTheme.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DeweyGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DeweyGame.Designer.cs">
+      <DependentUpon>DeweyGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FindingCallNum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FindingCallNum.Designer.cs">
+      <DependentUpon>FindingCallNum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IdentifyArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IdentifyArea.Designer.cs">
+      <DependentUpon>IdentifyArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyRedBlackTree.cs" />
+    <Compile Include="Recorded Attempts\GameAttempt.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recorded Attempts\GameAttempt2.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DeweyGame.resx">
+      <DependentUpon>DeweyGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FindingCallNum.resx">
+      <DependentUpon>FindingCallNum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IdentifyArea.resx">
+      <DependentUpon>IdentifyArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Book 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Book 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Book 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Book 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Book 5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Book 6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Book 7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Book 8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Book 9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Book 10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Photoshop Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PhotoShopWall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClickSound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dewey_Decimal_System_Poster_1024_x_661.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-home-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-logout-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-puzzle-matching-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-books-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HomeTheme.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameOneTheme.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameTwoTheme.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EgyptHyro.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeweyChart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeweyChartExpert.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ancient-egypt-styled-dewey-decimal-system.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ancient-egypt-styled-backgrounds.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
